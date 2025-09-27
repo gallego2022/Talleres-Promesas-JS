@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller de Promesas en JavaScript</title>
+  <script defer src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 text-white p-4 space-y-2 overflow-y-auto">
+      <h2 class="text-2xl font-bold mb-4">Casos con Promesas</h2>
+      <ul id="casosList" class="space-y-1">
+        <!-- Casos generados dinámicamente -->
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="flex-1 p-8">
+      <h1 class="text-3xl font-bold">Taller de Promesas</h1>
+      <p class="mt-2 text-gray-500">Selecciona un caso en el menú lateral para verlo en detalle.</p>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalCaso" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-lg w-full max-w-lg shadow-xl relative">
+      <button id="cerrarModal" class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-xl">&times;</button>
+      <h3 id="tituloCaso" class="text-xl font-semibold mb-2"></h3>
+      <p id="descripcionCaso" class="text-gray-600 mb-4"></p>
+      <button id="ejecutarCaso" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ejecutar</button>
+      <div id="resultadoCaso" class="mt-4 text-green-600 font-medium"></div>
+    </div>
+  </div>
+</body>
+</html>
